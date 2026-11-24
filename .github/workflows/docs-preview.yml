@@ -3,9 +3,12 @@
 # repository at third_party/reaf_sim, so the same layout is assembled here.
 name: docs-preview
 
+# From main only: the github-pages environment deploys from the default branch.
+# Run it by hand after changing the mujoco_playground side.
 on:
   push:
-    branches: [docs-with-mjswan]
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read

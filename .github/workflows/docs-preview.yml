@@ -19,8 +19,8 @@ concurrency:
 
 env:
   # Whose mujoco_playground/docs fills the Playground section.
-  PLAYGROUND_REPO: google-deepmind/mujoco_playground
-  PLAYGROUND_REF: main
+  PLAYGROUND_REPO: ttktjmt/mujoco_playground
+  PLAYGROUND_REF: docs-with-mjswan
 
 jobs:
   build:

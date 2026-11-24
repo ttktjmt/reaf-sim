@@ -266,7 +266,7 @@ html_theme_options = {
     "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink"],
     "footer_start": ["copyright", "last-updated"],
     "footer_end": [],
-    "navigation_depth": 2,
+    "navigation_depth": 3,
     "show_nav_level": 2,
     "show_toc_level": 2,
     "use_edit_page_button": True,

@@ -124,12 +124,8 @@ and capture visual rollouts:
     :caption: MuJoCo Playground
 
     Overview <playground/index>
-    Robots <playground/robots>
-    Teleoperation <playground/teleop>
-    System Identification <playground/sysid>
-    RL Training <playground/rl_training>
-    Sim-to-Real <playground/sim2real>
-    Agentic <playground/agentic>
+    Robots <playground/robots/index>
+    Tasks <playground/tasks/index>
     Contributing <playground/contributing>
     Changelog <playground/changelog>
 

@@ -1,0 +1,72 @@
+# Fork-only preview of reaf-sim.readthedocs.io, published to GitHub Pages. Not for
+# upstream. Read the Docs builds that site from mujoco_playground, which vendors this
+# repository at third_party/reaf_sim, so the same layout is assembled here.
+name: docs-preview
+
+on:
+  push:
+    branches: [docs-with-mjswan]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  # Whose mujoco_playground/docs fills the Playground section.
+  PLAYGROUND_REPO: google-deepmind/mujoco_playground
+  PLAYGROUND_REF: main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out mujoco_playground
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          repository: ${{ env.PLAYGROUND_REPO }}
+          ref: ${{ env.PLAYGROUND_REF }}
+          path: mp
+          persist-credentials: false
+
+      - name: Drop the vendored reaf-sim
+        run: rm -rf mp/third_party/reaf_sim
+
+      - name: Check out this branch in its place
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          path: mp/third_party/reaf_sim
+          persist-credentials: false
+
+      - name: Add the preview-only pages
+        run: cp mp/third_party/reaf_sim/.github/docs-preview/*.rst mp/third_party/reaf_sim/docs/
+
+      - name: Set up uv and Python
+        uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7
+        with:
+          python-version: "3.12"
+
+      - name: Build the docs as Read the Docs does
+        run: >-
+          uv run --no-project
+          --with-requirements mp/third_party/reaf_sim/docs/requirements.txt
+          sphinx-build -b html mp/third_party/reaf_sim/docs _site
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

@@ -11,7 +11,7 @@ LEAP Hand
 
 .. raw:: html
 
-   <iframe src="https://mjswan.com/s/L3eRFxI" title="LEAP Hand (mjswan)" loading="lazy"
+   <iframe src="https://embed.mjswan.com/L3eRFxI" title="LEAP Hand (mjswan)" loading="lazy"
      allow="xr-spatial-tracking; fullscreen"
      style="width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 6px;"></iframe>
 
@@ -20,7 +20,7 @@ Wuji Hand
 
 .. raw:: html
 
-   <iframe src="https://mjswan.com/s/XbIngWj" title="Wuji Hand (mjswan)" loading="lazy"
+   <iframe src="https://embed.mjswan.com/XbIngWj" title="Wuji Hand (mjswan)" loading="lazy"
      allow="xr-spatial-tracking; fullscreen"
      style="width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 6px;"></iframe>
 
@@ -29,7 +29,7 @@ Upkie
 
 .. raw:: html
 
-   <iframe src="https://mjswan.com/s/BIPHv2M" title="Upkie (mjswan)" loading="lazy"
+   <iframe src="https://embed.mjswan.com/BIPHv2M" title="Upkie (mjswan)" loading="lazy"
      allow="xr-spatial-tracking; fullscreen"
      style="width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 6px;"></iframe>
 
@@ -38,7 +38,7 @@ Jumper
 
 .. raw:: html
 
-   <iframe src="https://mjswan.com/s/7wT9SwQ" title="Jumper (mjswan)" loading="lazy"
+   <iframe src="https://embed.mjswan.com/7wT9SwQ" title="Jumper (mjswan)" loading="lazy"
      allow="xr-spatial-tracking; fullscreen"
      style="width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 6px;"></iframe>
 

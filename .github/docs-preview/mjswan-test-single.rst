@@ -4,12 +4,12 @@ mjswan embed test: one simulation
 =================================
 
 Preview only. One mjswan Cloud simulation, embedded the way the RL pages would embed
-it: a plain ``iframe`` with the control panel hidden.
+it: a plain ``iframe`` on its ``embed.mjswan.com`` URL.
 
 .. raw:: html
 
    <iframe
-     src="https://mjswan.com/s/L3eRFxI?panel=0"
+     src="https://embed.mjswan.com/L3eRFxI"
      title="LEAP Hand turning a cube (mjswan)"
      loading="lazy"
      allow="xr-spatial-tracking; fullscreen"

@@ -11,7 +11,6 @@ it: a plain ``iframe`` on its ``embed.mjswan.com`` URL.
    <iframe
      src="https://embed.mjswan.com/L3eRFxI"
      title="LEAP Hand turning a cube (mjswan)"
-     loading="lazy"
      allow="xr-spatial-tracking; fullscreen"
      style="width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 6px;">
    </iframe>

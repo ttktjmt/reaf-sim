@@ -3,8 +3,8 @@
 # repository at third_party/reaf_sim, so the same layout is assembled here.
 name: docs-preview
 
-# From main only: the github-pages environment deploys from the default branch.
-# Run it by hand after changing the mujoco_playground side.
+# From main only: the github-pages environment deploys from the default branch. To
+# preview another commit of the mujoco_playground side, set PLAYGROUND_REF to it.
 on:
   push:
     branches: [main]
@@ -18,9 +18,10 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  # Whose mujoco_playground/docs fills the Playground section.
+  # Whose mujoco_playground/docs fills the Playground section: a commit of its
+  # docs-with-mjswan branch, so each preview records what it shows.
   PLAYGROUND_REPO: ttktjmt/mujoco_playground
-  PLAYGROUND_REF: docs-with-mjswan
+  PLAYGROUND_REF: 9a5b70094d3c5a1b9f02f03728e26827eee473be
 
 jobs:
   build:

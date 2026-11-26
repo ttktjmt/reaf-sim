@@ -21,7 +21,7 @@ env:
   # Whose mujoco_playground/docs fills the Playground section: a commit of its
   # docs-with-mjswan branch, so each preview records what it shows.
   PLAYGROUND_REPO: ttktjmt/mujoco_playground
-  PLAYGROUND_REF: 61a51e2af67088f2728b4092d4dfead02182ec58
+  PLAYGROUND_REF: e7d7b83d9ac63e81f6cf90400efbea2695a6903e
 
 jobs:
   build:
